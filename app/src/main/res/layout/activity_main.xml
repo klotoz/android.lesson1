@@ -6,13 +6,107 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/ll_first"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/lite_gray"
+        android:weightSum="100"
+        >
+        <TextView
+            android:id="@+id/tv_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Напечатайте что-нибудь"
+            android:textStyle="italic"
+            android:textColor="@color/text_corall"
+            android:textSize="25sp"
+            android:layout_weight="10"
+            android:gravity="center"/>
+        
+        <EditText
+            android:id="@+id/et_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:hint="Вот здесь..."/>
+
+        <TextView
+            android:id="@+id/tv_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/text_corall"
+            android:textSize="20sp"
+            android:background="@color/white"
+            android:layout_weight="30"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/btn_pressMe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Нажмите, если напечатали"
+            android:textSize="20sp"
+            android:layout_weight="10"
+            android:textColor="@color/text_corall"
+
+    />
+
+        <Switch
+            android:id="@+id/sw_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Перейти на темную сторону"
+            android:textSize="25sp"
+            android:layout_weight="10"
+            android:layout_gravity="center"/>
+
+        <CheckBox
+            android:id="@+id/cb_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:layout_gravity="center"
+            android:text="Вы перешли?"/>
+
+        <ToggleButton
+            android:visibility="invisible"
+            android:id="@+id/tbtn_revers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:layout_gravity="center"
+            android:textOff="Получить печенки!"
+            android:textOn="А нас этому еще не научили"
+            android:textColor="@color/text_corall"
+            android:background="@color/lite_gray"/>
+
+        <Button
+            android:id="@+id/btn_nextTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:layout_gravity="center"
+            android:textColor="@color/text_corall"
+            android:textSize="10sp"
+            android:text="Переключиться на вторую часть домашнего задания"
+            />
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
